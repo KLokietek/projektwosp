@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://tvn24.pl/najnowsze/cdn-zdjecie-i845ab-29-2225-s1-cl-0133-6695344/29+2225+s1+cl-0133.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 760px;
+  height: 840px;
+  background: #a7a4a46c;
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.box::before
+{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 760px;
+    height: 840px;
+    background: linear-gradient(0deg,transparent, transparent, #4ddf6d,#4ddf6d,#4ddf6d);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after
+{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 760px;
+    height: 840px;
+    background: linear-gradient(0deg,transparent, transparent,  #4ddf6d,#4ddf6d,#4ddf6d);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before
+{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 760px;
+    height: 840px;
+    background: linear-gradient(0deg,transparent, transparent, #ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after
+{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 760px;
+    height: 840px;
+    background: linear-gradient(0deg,transparent, transparent, #ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.box form
+{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding:  50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.box form h1
+{
+    background: -webkit-linear-gradient(90deg, rgba(255,39,112,1) 36%, rgba(77,223,109,1) 71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  p 
+  {
+    margin-bottom: 50px;
+    color: #fff;
+  }
+  
+  
+  /* Formularz licytacji */
+  form {
+    margin-top: 0px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  input[type="number"] {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+.menu-icon{
+    width: 60px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+.search-bar{
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 30px;
+  color: #ffffff;
+}
+::placeholder{
+  color:#ffffff
+}
+.search-bar button img{
+  width: 30px;
+}
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(214, 136, 136, 0.342);
+  cursor: pointer;
+}
+.auction-image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}

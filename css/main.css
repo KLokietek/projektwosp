@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto, sans-serif';
+    
+}
+body{
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://tvn24.pl/najnowsze/cdn-zdjecie-i845ab-29-2225-s1-cl-0133-6695344/29+2225+s1+cl-0133.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    
+   
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+.menu-icon{
+    width: 60px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+.row{
+    display: flex;
+    height: 20%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: #fff;
+    font-size: 60px;
+}
+
+/*Kod do sliderow*/
+.col a{
+    text-decoration: none;
+}
+.col input{
+    display: none;
+}
+.col .slider-box{
+  width: 100%;
+  height: 100%;
+  max-width: 50px;
+  max-height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  transform-style: preserve-3d; 
+  flex-direction: column;
+  margin-bottom: 100px; 
+}
+.col .cards{
+    position: relative;
+    height: 200px;
+    width: 230px;
+    margin-bottom: 20px;
+    perspective: 100%;
+    transform-style: preserve-3d;
+}
+.col .cards label{
+    position: absolute;
+    width: 430px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition:transform 0.55s ease;
+}
+.col .cards .card{
+    position: relative;
+    height: 100%;
+    background-color: #1c1c1c;
+    border-radius:10px;
+    padding: 30px 35px;
+}
+.col .cards .image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col .cards .image img{
+    border-radius: 10px;
+    box-shadow: 20px 20px 40px rgb(56, 45, 45);
+    margin-top: 10px;
+    width: 100%;
+    object-fit: cover;
+    transition: all .7s;
+}
+.col .cards .image img:hover{
+    transform:scale(1.05) ;
+}
+.col .card .infos{
+    display: block;
+    text-align: center;
+    padding-top: 25px;
+}
+.col .card .infos span{
+    display: block;
+}
+.col .infos .title{
+    font-size:30px;
+    letter-spacing: 80x;
+    margin-bottom: 20px;
+    color: #8f8f8f;
+}
+.col .card .text{
+    font-size: 14px;
+    color: #8f8f8f;
+}
+.col .card .btn-auction{
+    width: 100%;
+    height: 60px;
+    margin: 35px auto;
+    border-radius: 5px;
+    background-color: #90f790;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 600;   
+}
+.col .card .btn-auction:hover{
+    transform: scale(1.09);
+}
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3{
+    box-shadow: 0 15px 30px rgb(0, 0, 0,45%);
+    transform: translate3d(-80%, 0, -220px);
+    --current-color1:white;
+    --current-color2:blue;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4{
+    box-shadow: 0 20px 40px rgb(0, 0, 0,45%);
+    transform: translate3d(-45%, 0, -120px);
+    --current-color1:white;
+    --current-color2:blue;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5{
+    box-shadow: 0 25px 50px rgb(0, 0, 0,50%);
+    transform: translate3d(0,0,0);
+    --current-color1:white;
+    --current-color2:blue;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1{
+    box-shadow: 0 20px 40px rgb(0, 0, 0,45%);
+    transform: translate3d(45%,0,-120px);
+    --current-color1:white;
+    --current-color2:blue;
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2{
+    box-shadow: 0 15px 30px rgb(0, 0, 45%);
+    transform: translate3d(80%,0,-220px);
+    --current-color1:white;
+    --current-color2:blue;
+}
+footer{
+    background: rgb(36, 88, 36);
+    height:auto;
+    width: 100vw;
+    font-family:"Open Sans";
+    padding-top:    40px;
+    color:white;
+}
+.footer-content{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align:center;
+}
+.footer-content h3{
+    font-size:1.8rem;
+    font-weight:400;
+    text-transform: capitalize;
+    line-height:3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line_height: 28px;
+    font-size:14px;
+}
+.socials{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin:0 10px;
+}
+.socials a{
+    text-decoration:none;
+    color:white;
+}
+.socials a i{
+    font-size:1.1rem;
+}
+.socials a:hover i{
+    color:blue;
+}
+.footer-bottom{
+    width:100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size:14px;
+    word-spacing:2px;
+    text-transform:capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity:.4;
+    font-weight:200;
+}
+
+

@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto, sans-serif';
+    
+}
+body{
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://tvn24.pl/najnowsze/cdn-zdjecie-i845ab-29-2225-s1-cl-0133-6695344/29+2225+s1+cl-0133.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+   
+}
+.navbar {
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.navbar .dropdown a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+.menu-icon{
+    width: 60px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+.dropdown{
+    position: relative;
+    text-decoration: none;
+}
+.dropdown ul{
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    background-color: #1c1c1c;
+    padding: 0;
+    list-style-type: none;
+    box-shadow: 0px 0px 23px 0px rgb(131, 40, 40);
+    margin-top: 10px;
+    border-radius: 7px;
+    display: none;
+}
+.dropdown ul li{
+    padding: 0.5rem;
+    color: black;
+}
+.dropdown ul li a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.dropdown ul li:hover{
+    background:  #90f790;
+    border-radius: 7px;
+}
+.dropdown a:focus + ul{
+    display: block;
+}
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 30px;
+    color: #ffffff;
+}
+::placeholder{
+    color:#ffffff
+}
+.search-bar button img{
+    width: 40px;
+}
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgb(214, 133, 133);
+    cursor: pointer;
+}

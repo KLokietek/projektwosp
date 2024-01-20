@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://tvn24.pl/najnowsze/cdn-zdjecie-i845ab-29-2225-s1-cl-0133-6695344/29+2225+s1+cl-0133.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.register{
+    position: relative;
+    width: 400px;
+    height: 1000px;
+    background:rgb(12, 12, 12);
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+.error{
+    color: red;
+    margin-top: 10%;
+}
+.register::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 650px;
+    background: linear-gradient(0deg,transparent, transparent, #4ddf6d,#4ddf6d,#4ddf6d);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.register::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 650px;
+    background: linear-gradient(0deg,transparent, transparent, #4ddf6d,#4ddf6d,#4ddf6d);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before
+{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 650px;
+    background: linear-gradient(0deg,transparent, transparent, #ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after
+{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 650px;
+    background: linear-gradient(0deg,transparent, transparent, #ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.register form{
+    position: absolute;
+    inset: 4px;
+    background: rgb(34, 31, 31);
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.register form h1{
+    background: -webkit-linear-gradient(90deg, rgba(255,39,112,1) 36%, rgba(77,223,109,1) 71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    text-align: center;  
+       
+}
+.register h1::after{
+    content: '';
+    width: 70%;
+    height: 3px;
+    border-radius: 3px;
+    background:  rgb(136, 244, 181);
+    position: absolute;
+    bottom: 690px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.register form .input-field{
+  position: relative;
+  width: 300px;
+  margin-top: 30px;  
+} 
+.register form .input-field input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    z-index: 10;
+}
+.register form .input-field span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color:#8f8f8f;    
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.register form .input-field input:valid ~ span,
+.register form .input-field input:focus ~ span
+{
+    color: rgb(255, 255, 255);
+    font-size: 0.75em;
+    transform: translateY(-34px);   ;
+}
+.register form .input-field i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.register form .input-field input:valid ~ i,
+.register form .input-field input:focus ~ i
+{
+    height: 50px;
+}
+.register form input[type="submit"]
+{
+    border: none;
+    padding:9px 25px;
+    outline: none;
+    background: #90f790;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 300px;
+    margin-top: 20px;
+    color: black;
+    
+    
+    
+}
+.register form input[type="submit"]:active
+{
+    opacity: 0.8;
+
+}
+.reg    
+{
+    color: #ffffff;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
